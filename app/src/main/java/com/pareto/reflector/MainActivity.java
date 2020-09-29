@@ -49,7 +49,9 @@ public class MainActivity extends AppCompatActivity {
                     try {
                         Class<?> ActivityThread = Class.forName("android.app.ActivityThread");
                         Method method = ActivityThread.getMethod("currentActivityThread");
+                        //获取到当前线程
                         Object currentActivityThread = method.invoke(ActivityThread);
+                        //获取Context
                         Method method2 = currentActivityThread.getClass().getMethod("getApplication");
                         m_context = (Context) method2.invoke(currentActivityThread);
                     } catch (Exception e) {
