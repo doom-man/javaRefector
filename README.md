@@ -1,0 +1,2 @@
+# javaRefector
+native层调用getPackageManager 获取已安装的应用为例来学习java反射
